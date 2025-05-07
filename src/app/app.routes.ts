@@ -13,14 +13,9 @@ import { WhyusComponent } from './features/pages/whyus/whyus.component';
 
 export const routes: Routes = [
     {
-        path:'',
+        path:'home',
         component:HeroComponent,
         title:"Mr. Burger | Home"
-    },
-    {
-        path:"**",
-        redirectTo:'',
-        pathMatch:'full'
     },
     {
         path:"about",
@@ -71,5 +66,15 @@ export const routes: Routes = [
         path:"whyus",
         component:WhyusComponent,
         title:"Mr. Burger | WhyUs"
-    }
+    },
+    {
+        path:'',
+        redirectTo:'home',
+        pathMatch:'full'
+    },
+    {
+        path:"**",
+        redirectTo:'home',
+        pathMatch:'full'
+    },
 ];
